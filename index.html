@@ -27,6 +27,7 @@
         details > summary::-webkit-details-marker { display: none; }
         details[open] summary .arrow-down { transform: rotate(180deg); }
         .arrow-down { transition: transform 0.2s; }
+        .table-header { background-color: #F1F5F9; }
     </style>
 </head>
 <body class="antialiased">
@@ -54,21 +55,101 @@
                     </p>
 
                     <h3 class="text-xl font-bold text-gray-700 mb-4 text-center">Key Mineral Interactions & Antagonisms</h3>
-                     <div class="p-4 bg-gray-50 rounded-lg">
-                        <div class="flex flex-col md:flex-row justify-around items-center gap-8">
+                     <div class="p-4 bg-gray-50 rounded-lg mb-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                             <div class="text-center p-4 rounded-lg bg-red-50 border border-red-200">
                                 <h4 class="font-bold text-lg text-red-800">K ➔ Mg</h4>
-                                <p class="text-red-700 mt-1">High pasture <b class="font-semibold">Potassium (K)</b> strongly inhibits <b class="font-semibold">Magnesium (Mg)</b> absorption in the rumen, increasing the risk of grass staggers (hypomagnesaemia).</p>
+                                <p class="text-red-700 mt-1">High pasture <b class="font-semibold">Potassium (K)</b> strongly inhibits <b class="font-semibold">Magnesium (Mg)</b> absorption in the rumen, increasing the risk of grass staggers.</p>
                             </div>
                             <div class="text-center p-4 rounded-lg bg-blue-50 border border-blue-200">
                                 <h4 class="font-bold text-lg text-blue-800">Mo + S ➔ Cu</h4>
-                                <p class="text-blue-700 mt-1"><b class="font-semibold">Molybdenum (Mo)</b> and <b class="font-semibold">Sulfur (S)</b> combine in the rumen to form thiomolybdates, which bind <b class="font-semibold">Copper (Cu)</b>, making it unavailable for absorption.</p>
+                                <p class="text-blue-700 mt-1"><b class="font-semibold">Molybdenum (Mo)</b> and <b class="font-semibold">Sulfur (S)</b> combine in the rumen to form thiomolybdates, which bind <b class="font-semibold">Copper (Cu)</b>, making it unavailable.</p>
                             </div>
                              <div class="text-center p-4 rounded-lg bg-yellow-50 border border-yellow-200">
                                 <h4 class="font-bold text-lg text-yellow-800">Fe ➔ Cu + Mn</h4>
                                 <p class="text-yellow-700 mt-1">Excess <b class="font-semibold">Iron (Fe)</b>, often from soil or water, competes with <b class="font-semibold">Copper (Cu)</b> and <b class="font-semibold">Manganese (Mn)</b> for absorption.</p>
                             </div>
+                            <div class="text-center p-4 rounded-lg bg-green-50 border border-green-200">
+                                <h4 class="font-bold text-lg text-green-800">DCAD Management</h4>
+                                <p class="text-green-700 mt-1">A <b class="font-semibold">low DCAD</b> pre-calving is key to preventing <b class="font-semibold">Milk Fever</b> by improving Calcium mobilization. DCAD = (Na⁺ + K⁺) – (Cl⁻ + S²⁻).</p>
+                            </div>
                         </div>
+                    </div>
+
+                    <h3 class="text-xl font-bold text-gray-700 mb-4 text-center">Herd Status Monitoring at a Glance</h3>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full bg-white border border-gray-200 rounded-lg">
+                            <thead class="table-header">
+                                <tr>
+                                    <th class="py-3 px-4 text-left text-sm font-semibold text-gray-600 uppercase tracking-wider">Nutrient</th>
+                                    <th class="py-3 px-4 text-left text-sm font-semibold text-gray-600 uppercase tracking-wider">Desired Timing of Evaluation</th>
+                                    <th class="py-3 px-4 text-left text-sm font-semibold text-gray-600 uppercase tracking-wider">Primary Tissue Used</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <!-- Macrominerals -->
+                                <tr><td colspan="3" class="py-2 px-4 bg-gray-100 font-bold text-gray-700">Macrominerals</td></tr>
+                                <tr>
+                                    <td class="py-3 px-4">Calcium (Ca)</td>
+                                    <td class="py-3 px-4">Pre-calving / Early Lactation</td>
+                                    <td class="py-3 px-4">Serum</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4">Phosphorus (P)</td>
+                                    <td class="py-3 px-4">Any (esp. with supplementary crops)</td>
+                                    <td class="py-3 px-4">Serum</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4">Magnesium (Mg)</td>
+                                    <td class="py-3 px-4">Pre-calving / Spring</td>
+                                    <td class="py-3 px-4">Serum</td>
+                                </tr>
+                                <!-- Microminerals -->
+                                <tr><td colspan="3" class="py-2 px-4 bg-gray-100 font-bold text-gray-700">Microminerals</td></tr>
+                                <tr>
+                                    <td class="py-3 px-4">Zinc (Zn)</td>
+                                    <td class="py-3 px-4">Pre-mating / Autumn (Facial Eczema)</td>
+                                    <td class="py-3 px-4">Serum</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4">Copper (Cu)</td>
+                                    <td class="py-3 px-4">Late Lactation / Pre-dry off</td>
+                                    <td class="py-3 px-4"><b>Liver (Gold Standard)</b> / Serum</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4">Selenium (Se)</td>
+                                    <td class="py-3 px-4">Pre-mating</td>
+                                    <td class="py-3 px-4"><b>Whole Blood</b> (long-term) / Serum (recent)</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4">Cobalt (as Vit B12)</td>
+                                    <td class="py-3 px-4">Pre-mating / Young stock</td>
+                                    <td class="py-3 px-4">Serum</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4">Iodine (I)</td>
+                                    <td class="py-3 px-4">Any (esp. with brassica crops)</td>
+                                    <td class="py-3 px-4">Serum (T4) / Plasma (PII)</td>
+                                </tr>
+                                 <!-- Vitamins -->
+                                <tr><td colspan="3" class="py-2 px-4 bg-gray-100 font-bold text-gray-700">Vitamins</td></tr>
+                                <tr>
+                                    <td class="py-3 px-4">Vitamin A</td>
+                                    <td class="py-3 px-4">When feeding stored forages</td>
+                                    <td class="py-3 px-4">Plasma</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4">Vitamin D</td>
+                                    <td class="py-3 px-4">Winter / Housed cattle</td>
+                                    <td class="py-3 px-4">Plasma (25-OH-D)</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4">Vitamin E</td>
+                                    <td class="py-3 px-4">Pre-calving (Transition)</td>
+                                    <td class="py-3 px-4">Plasma</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
 
                     <h3 class="text-xl font-bold text-gray-700 mt-8 mb-4">How to Use This Guide</h3>
@@ -125,8 +206,7 @@ const nutrientData = {
                 ranges: ['< 2.00', '2.00 - 2.25', '> 2.25']
             },
             details: [
-                { title: 'Physiological Functions', content: '98% is in the skeleton. The rest is vital for muscle contraction, nerve impulse transmission, blood clotting, and as a cellular second messenger. Blood levels are tightly regulated by PTH and Vitamin D.' },
-                { title: 'Factorial Approach to Feeding Requirements', content: 'The total required amount of absorbed calcium is calculated by summing the needs for: <br><b>1. Maintenance:</b> Replacing endogenous fecal and urinary losses. <br><b>2. Lactation:</b> The amount secreted in milk (approx. 1.22 g/kg). <br><b>3. Pregnancy:</b> For fetal development. <br><b>4. Growth:</b> For tissue deposition in young stock. <br>This total absorbed requirement is then divided by an absorption coefficient (AC) to determine the dietary requirement. The AC is highly variable and is the main source of uncertainty in the model.' },
+                { title: 'Physiological Functions', content: 'Calcium is the most abundant mineral in the body, with 98% stored in the skeleton providing structural integrity. The remaining 2% in extracellular fluids and soft tissues is vital for life. It is essential for: <br><b>• Muscle Contraction:</b> Triggers the interaction of actin and myosin in both skeletal and smooth muscle. <br><b>• Nerve Transmission:</b> Required for the release of neurotransmitters at the synapse. <br><b>• Blood Clotting:</b> Acts as a cofactor for several key enzymes in the coagulation cascade. <br><b>• Cellular Signaling:</b> Functions as a universal second messenger, relaying signals from the cell surface to intracellular proteins to regulate a vast array of cellular processes. <br>Blood calcium is tightly regulated by parathyroid hormone (PTH) and Vitamin D, which control its absorption from the intestine, reabsorption from the kidney, and mobilization from bone.' },
                 { title: 'Suggested Dietary Intake (NZ Context)', content: 'For lactating cows, a dietary concentration of <b>0.45% to 0.60% DM</b> is typical. However, the most critical factor in NZ is not the dietary concentration itself, but managing the <b>Dietary Cation-Anion Difference (DCAD)</b> in the pre-calving diet to prevent milk fever. This involves feeding a low DCAD diet for 3 weeks pre-calving to improve calcium mobilization.' },
                 { title: 'Deficiency & Toxicity', content: '<b>Deficiency:</b> Periparturient hypocalcemia (milk fever) is the major disorder, with clinical and subclinical forms increasing risk for other diseases. Chronic deficiency can cause osteoporosis. <br><b>Toxicity:</b> Rare, but high intake can interfere with P and Mg absorption.' }
             ]
@@ -141,8 +221,7 @@ const nutrientData = {
                 ranges: ['< 0.65', '0.65 - 1.1', '1.3 - 2.0']
             },
             details: [
-                { title: 'Physiological Functions', content: 'A core component of ATP (energy), phospholipids (cell membranes), and nucleic acids (DNA/RNA). 80% is in the skeleton with calcium. Crucial for acid-base balance.' },
-                { title: 'Factorial Approach to Feeding Requirements', content: 'The requirement for absorbed phosphorus is the sum of needs for maintenance, lactation (approx. 0.90 g/kg milk), pregnancy, and growth. The NRC (2001) uses an absorption coefficient of 0.64 for forages and 0.70 for concentrates, though recent evidence suggests P may be absorbed more efficiently than this.' },
+                { title: 'Physiological Functions', content: 'Phosphorus, as phosphate, is involved in more biological functions than any other mineral. Key roles include: <br><b>• Energy Metabolism:</b> It is a core component of adenosine triphosphate (ATP), the universal energy currency of the cell. The breaking of high-energy phosphate bonds in ATP releases the energy that drives most metabolic reactions. <br><b>• Cell Structure:</b> It forms the hydrophilic backbone of phospholipids, which are the primary building blocks of all biological membranes. <br><b>• Genetic Material:</b> It forms the phosphodiester bonds that link nucleotides together to create the structure of DNA and RNA. <br><b>• Acid-Base Balance:</b> It is a major component of the phosphate buffer system in blood, helping to maintain stable pH. <br><b>• Bone Structure:</b> Approximately 80% of body phosphorus is found in the skeleton, complexed with calcium as hydroxyapatite.' },
                 { title: 'Suggested Dietary Intake (NZ Context)', content: 'A dietary concentration of <b>0.32% to 0.42% of DM</b> is generally recommended for lactating cows. Particular attention is needed when feeding supplementary crops like fodder beet, which are very low in phosphorus and require specific supplementation to avoid production losses.' },
                 { title: 'Deficiency & Toxicity', content: '<b>Deficiency:</b> Reduced feed intake, poor growth, and pica (depraved appetite). Severe deficiency causes rickets or osteomalacia. <br><b>Toxicity:</b> High intake in pre-fresh cows can suppress Vitamin D activation, increasing milk fever risk.' }
             ]
@@ -157,8 +236,7 @@ const nutrientData = {
                 ranges: ['< 0.50', '0.50 - 0.80', '> 0.80']
             },
             details: [
-                { title: 'Physiological Functions', content: 'Cofactor for over 300 enzymes, essential for ATP metabolism and nerve/muscle function. Critically, Mg is required for PTH secretion and action, linking it directly to calcium homeostasis.' },
-                { title: 'Factorial Approach to Feeding Requirements', content: 'While a factorial requirement can be calculated, it is often inadequate for NZ pasture-based systems. The model\'s standard absorption coefficient does not account for the severe depression in Mg absorption caused by high dietary potassium, which is common in lush pasture. Therefore, requirements must be adjusted upwards to overcome this antagonism.' },
+                { title: 'Physiological Functions', content: 'Magnesium is a critical cofactor for over 300 enzymes, making it essential for a vast range of metabolic processes. Its functions include: <br><b>• Enzyme Activation:</b> It is required by nearly all enzymes that utilize ATP, such as kinases involved in glycolysis and the Krebs cycle. It stabilizes the ATP molecule, allowing it to be used effectively. <br><b>• Calcium Homeostasis:</b> Mg is absolutely essential for the cow\'s ability to respond to low blood calcium. It is required for both the secretion of parathyroid hormone (PTH) from the parathyroid gland and for the binding of PTH to its receptors in bone and kidney. Therefore, hypomagnesaemia directly causes hypocalcemia. <br><b>• Nerve & Muscle Function:</b> It is crucial for normal nerve conduction and muscle relaxation, acting as a natural calcium channel blocker at the neuromuscular junction.' },
                 { title: 'Suggested Dietary Intake (NZ Context)', content: 'Due to the potassium antagonism, much higher dietary levels are needed. DairyNZ recommends target concentrations of <b>0.35% DM for dry cows</b> and <b>0.28% DM for lactating cows</b>. This often requires supplementing <b>15-20 grams of elemental Mg per cow per day</b> during the high-risk spring period.' },
                 { title: 'Deficiency & Toxicity', content: '<b>Deficiency:</b> Hypomagnesaemia (grass tetany) is an acute, often fatal disorder causing nervousness, tremors, convulsions, and death. Subclinical deficiency increases milk fever risk. <br><b>Toxicity:</b> Extremely rare from dietary sources.' }
             ]
@@ -175,8 +253,7 @@ const nutrientData = {
                 ranges: ['< 7', '7 - 12', '12 - 18.5']
             },
             details: [
-                { title: 'Physiological Functions', content: 'Component of hundreds of enzymes. Essential for immune function, protein synthesis, and maintaining the integrity of epithelial barriers like skin and hooves.' },
-                { title: 'Factorial Approach to Feeding Requirements', content: 'The factorial requirement for absorbed zinc is the sum of needs for maintenance (based on body weight), lactation (approx. 4 mg/kg milk), pregnancy, and growth. This is divided by an absorption coefficient of 0.15 to determine the dietary requirement.' },
+                { title: 'Physiological Functions', content: 'Zinc is a component of over 300 enzymes, participating in all major metabolic pathways. Its key functions are: <br><b>• Catalytic Role:</b> It is a structural or catalytic component of enzymes like carbonic anhydrase (for CO2 transport), alcohol dehydrogenase, and alkaline phosphatase. <br><b>• Gene Expression:</b> It is a key structural component of "zinc-finger" proteins, which are transcription factors that bind to DNA and regulate the expression of genes. <br><b>• Immune Function:</b> Zinc is essential for the normal development and function of both the innate and adaptive immune systems, including the function of neutrophils, macrophages, and lymphocytes. <br><b>• Epithelial Integrity:</b> It is critical for maintaining the health and integrity of skin and hooves through its role in cell division and protein synthesis.' },
                 { title: 'Suggested Dietary Intake (NZ Context)', content: 'A daily intake of <b>750 mg of zinc per cow</b> is recommended for general health. During the facial eczema risk period (autumn), much higher doses are used for prevention, which requires careful management to avoid inducing a secondary copper deficiency.' },
                 { title: 'Deficiency & Toxicity', content: '<b>Deficiency:</b> Reduced feed intake, parakeratosis (thick, crusty skin), poor hoof quality, and impaired immune function. <br><b>Toxicity:</b> Relatively non-toxic, but very high levels can induce copper deficiency.' }
             ]
@@ -191,8 +268,7 @@ const nutrientData = {
                 ranges: ['< 0.045', '0.045 - 0.095', '> 0.095', '> 2.800']
             },
             details: [
-                { title: 'Physiological Functions', content: 'Cofactor for enzymes involved in iron metabolism, connective tissue formation, pigmentation, and antioxidant defense. Vital for robust immune function.' },
-                { title: 'Factorial Approach to Feeding Requirements', content: 'The factorial requirement for absorbed copper is calculated from maintenance, lactation, pregnancy, and growth needs. However, the absorption coefficient is extremely variable due to potent antagonism from molybdenum, sulfur, and iron. This makes the factorial approach less reliable for predicting dietary needs in NZ without also analyzing for antagonists.' },
+                { title: 'Physiological Functions', content: 'Copper is an essential cofactor for several critical oxidoreductase enzymes (cuproenzymes). Key functions include: <br><b>• Iron Metabolism:</b> It is a component of ceruloplasmin, an enzyme that oxidizes ferrous iron (Fe2+) to ferric iron (Fe3+), which is required for iron to be transported in the blood by transferrin. A copper deficiency can therefore cause a secondary iron-deficiency anemia. <br><b>• Connective Tissue:</b> It is required for lysyl oxidase, an enzyme essential for the cross-linking of collagen and elastin, which provides strength and elasticity to connective tissues, bone, and blood vessels. <br><b>• Pigmentation:</b> It is a component of tyrosinase, the enzyme required for the synthesis of melanin, the pigment in hair and skin. <br><b>• Antioxidant Defense:</b> It is a component of Cu/Zn superoxide dismutase (SOD), an enzyme that neutralizes superoxide free radicals.' },
                 { title: 'Suggested Dietary Intake (NZ Context)', content: 'Dietary requirements are dictated by the need to overcome antagonists. Total dietary copper levels may need to be <b>20 ppm or higher</b>. DairyNZ provides a general recommendation of <b>250-400 mg of total copper per cow per day</b>. Supplementation must be guided by liver biopsy results to avoid toxicity.' },
                 { title: 'Deficiency & Toxicity', content: '<b>Deficiency:</b> Poor growth, scours, reduced fertility, and loss of coat color ("spectacles"). <br><b>Toxicity:</b> Chronic toxicity is a growing problem. Excess Cu accumulates in the liver and a stress event can trigger a fatal hemolytic crisis.' }
             ]
@@ -207,8 +283,7 @@ const nutrientData = {
                 ranges: ['< 130', '130 - 250', '> 250', '> 3000']
             },
             details: [
-                { title: 'Physiological Functions', content: 'Functions via selenoproteins, most notably the antioxidant enzyme glutathione peroxidase (GPx). Essential for immune function (reducing retained membranes, mastitis) and thyroid hormone activation.' },
-                { title: 'Factorial Approach to Feeding Requirements', content: 'Selenium requirements are not typically calculated using a factorial model. Instead, they are expressed as a dietary concentration that has been shown to prevent deficiency signs and optimize the activity of selenoenzymes like glutathione peroxidase.' },
+                { title: 'Physiological Functions', content: 'Selenium functions as the amino acid selenocysteine within a family of selenoproteins. Its most important roles are: <br><b>• Antioxidant Defense:</b> It is the active center of the enzyme glutathione peroxidase (GPx), which neutralizes hydrogen peroxide and other damaging free radicals, protecting cell membranes from oxidative damage. It works synergistically with Vitamin E. <br><b>• Thyroid Hormone Metabolism:</b> It is a component of the deiodinase enzymes, which are responsible for converting the thyroid hormone thyroxine (T4) into its more biologically active form, triiodothyronine (T3). This links selenium directly to the regulation of the body\'s metabolic rate. <br><b>• Immune Function:</b> Adequate selenium is critical for a robust immune response, particularly for neutrophil function and reducing the incidence of retained fetal membranes and mastitis.' },
                 { title: 'Suggested Dietary Intake (NZ Context)', content: 'Due to widespread soil deficiency, supplementation is routine. A dietary concentration of <b>0.3 mg/kg of total DM</b> is considered adequate. DairyNZ recommends a total daily intake of <b>5 mg of selenium per cow</b>. It has a narrow margin of safety.' },
                 { title: 'Deficiency & Toxicity', content: '<b>Deficiency:</b> White muscle disease in calves, retained fetal membranes, increased mastitis, and ill-thrift. <br><b>Toxicity:</b> Has a narrow margin of safety. Chronic toxicity causes hair loss and hoof deformities.' }
             ]
@@ -223,8 +298,7 @@ const nutrientData = {
                 ranges: ['< 75', '75 - 220', '> 220']
             },
             details: [
-                { title: 'Physiological Functions', content: 'Sole function is as a core component of Vitamin B12, which is synthesized by rumen microbes. B12 is essential for energy production (gluconeogenesis) and methionine metabolism.' },
-                { title: 'Factorial Approach to Feeding Requirements', content: 'The requirement is not for the animal itself, but for the rumen microbes to synthesize Vitamin B12. Therefore, the requirement is expressed as a dietary concentration needed to support adequate microbial synthesis, rather than a sum of factorial needs.' },
+                { title: 'Physiological Functions', content: 'Cobalt\'s sole function in ruminants is as a central component of the vitamin B12 (cobalamin) molecule, which is synthesized by rumen microbes. The animal has no direct requirement for cobalt itself. Vitamin B12 is a critical cofactor for two key enzymes: <br><b>• Methylmalonyl-CoA Mutase:</b> This enzyme is essential for the final step in the conversion of propionate (a major VFA from rumen fermentation) into glucose in the liver. A deficiency of B12 blocks this pathway, leading to severe energy deficiency. <br><b>• Methionine Synthase:</b> This enzyme is involved in the regeneration of the amino acid methionine, which is important for protein synthesis and metabolism.' },
                 { title: 'Suggested Dietary Intake (NZ Context)', content: 'The NRC (2001) requirement is <b>0.11 ppm of diet DM</b>. However, research suggests high-producing cows may benefit from higher levels (1.0-1.3 ppm). DairyNZ recommends a daily intake of <b>8-10 mg of cobalt per cow</b>.' },
                 { title: 'Deficiency & Toxicity', content: '<b>Deficiency:</b> Loss of appetite, ill-thrift, poor growth, severe weight loss, and anemia. Young, growing animals are most susceptible. <br><b>Toxicity:</b> Not a practical concern.' }
             ]
@@ -239,8 +313,7 @@ const nutrientData = {
                 ranges: ['< 20', '20 - 35', '> 35']
             },
             details: [
-                { title: 'Physiological Functions', content: 'An essential constituent of the thyroid hormones T4 and T3, which regulate the body\'s overall metabolic rate, growth, and reproduction.' },
-                { title: 'Factorial Approach to Feeding Requirements', content: 'The factorial requirement for absorbed iodine is the sum of needs for maintenance (based on body weight), lactation, and pregnancy. This is divided by an absorption coefficient of approximately 0.80.' },
+                { title: 'Physiological Functions', content: 'Iodine\'s only known function is as an essential constituent of the thyroid hormones, thyroxine (T4) and triiodothyronine (T3). These hormones are synthesized in the thyroid gland and are the primary regulators of the body\'s basal metabolic rate. They act on virtually all cells in the body to control the rate of oxygen consumption and energy expenditure, thereby influencing growth, thermoregulation, and the metabolism of carbohydrates, proteins, and fats. Adequate iodine is therefore essential for normal growth, lactation, and reproduction.' },
                 { title: 'Suggested Dietary Intake (NZ Context)', content: 'A daily intake of <b>50-60 mg of iodine per cow</b> is recommended. The requirement is increased when feeding goitrogenic crops like brassicas, which are common in NZ and interfere with iodine uptake by the thyroid gland.' },
                 { title: 'Deficiency & Toxicity', content: '<b>Deficiency:</b> Goiter (enlarged thyroid), especially in newborn calves. In adults, causes reduced fertility and poor production. <br><b>Toxicity:</b> Narrow safety margin. Excess can cause coughing, nasal discharge, and paradoxically, goiter.' }
             ]
@@ -257,8 +330,7 @@ const nutrientData = {
                 ranges: ['< 0.2', '0.2 - 0.3', '> 0.3']
             },
             details: [
-                { title: 'Physiological Functions', content: 'Essential for vision, maintaining the integrity of epithelial tissues (respiratory, GI, reproductive tracts), immune function, and reproduction.' },
-                { title: 'Factorial Approach to Feeding Requirements', content: 'Vitamin requirements are typically expressed as an Adequate Intake (AI) in International Units (IU), rather than a strict factorial calculation. The AI is determined based on the amount needed to prevent deficiency and support optimal health and production for a given physiological state (e.g., lactation, dry period).' },
+                { title: 'Physiological Functions', content: 'Vitamin A (retinol and its derivatives) is a fat-soluble vitamin with several critical functions: <br><b>• Vision:</b> The aldehyde form, retinal, is a key component of the visual pigment rhodopsin in the retina, making it essential for vision, especially in low light. <br><b>• Epithelial Integrity:</b> The acid form, retinoic acid, is essential for the differentiation and maintenance of epithelial tissues that line the respiratory, gastrointestinal, and reproductive tracts. It ensures these tissues produce mucus and form an effective barrier against pathogens. <br><b>• Immune Function:</b> It is vital for both the innate and adaptive immune systems, influencing the function of neutrophils, macrophages, and lymphocytes. <br><b>• Reproduction:</b> Adequate Vitamin A is required for normal reproductive function in both males and females.' },
                 { title: 'Suggested Dietary Intake (NZ Context)', content: 'The recommended intake is <b>110 IU per kg of body weight</b>, which equates to approximately <b>70,000 IU/day</b> for a typical Holstein. Supplementation is critical when feeding stored forages (silage, hay) or high-concentrate diets, as Vitamin A content degrades over time.' },
                 { title: 'Deficiency', content: 'Night blindness, reproductive failure, and increased susceptibility to infections due to compromised epithelial barriers.' }
             ]
@@ -273,8 +345,7 @@ const nutrientData = {
                 ranges: ['< 30', '> 30']
             },
             details: [
-                { title: 'Physiological Functions', content: 'Regulates calcium and phosphorus homeostasis by promoting intestinal absorption. It also plays a critical, newly understood role in modulating the immune system.' },
-                { title: 'Factorial Approach to Feeding Requirements', content: 'Like other vitamins, Vitamin D requirements are expressed as an Adequate Intake (AI). The AI is based on research showing the amount needed to maintain normal calcium metabolism and, more recently, to support optimal immune function.' },
+                { title: 'Physiological Functions', content: 'Vitamin D is a prohormone that is converted to its active hormonal form, 1,25-dihydroxyvitamin D. Its functions include: <br><b>• Calcium & Phosphorus Homeostasis:</b> This is its classical function. The active hormone binds to the Vitamin D Receptor (VDR) in the intestine to increase the absorption of dietary calcium and phosphorus. It also works with PTH to regulate bone resorption and kidney reabsorption of these minerals. <br><b>• Immune Modulation:</b> The VDR is present on immune cells (macrophages, T-cells, B-cells). Vitamin D plays a critical role in modulating the immune system, for example, by enhancing the production of antimicrobial peptides by macrophages, which helps them kill pathogens.' },
                 { title: 'Suggested Dietary Intake (NZ Context)', content: 'An intake of <b>30 IU per kg of body weight</b> (approx. 20,000 IU/day) is sufficient for calcium metabolism. However, to optimize immune function, higher levels of <b>45-50 IU/kg of body weight</b> (approx. 30,000 IU/day) may be beneficial, especially for cows with limited sun exposure.' },
                 { title: 'Deficiency', content: 'Severe deficiency causes rickets (young) or osteomalacia (adults). Suboptimal status is linked to impaired immune function.' }
             ]
@@ -289,8 +360,7 @@ const nutrientData = {
                 ranges: ['< 2.0', '2.0 - 3.0', '> 3.0']
             },
             details: [
-                { title: 'Physiological Functions', content: 'Protects cell membranes from oxidative damage. It works synergistically with Selenium. This antioxidant role is crucial for immune cells, muscle, and the reproductive system.' },
-                { title: 'Factorial Approach to Feeding Requirements', content: 'Vitamin E requirements are expressed as an Adequate Intake (AI). The AI varies significantly based on the desired outcome. A lower AI is needed to prevent classic deficiency signs (e.g., white muscle disease), while a much higher AI is required to achieve optimal immune function during periods of stress.' },
+                { title: 'Physiological Functions', content: 'Vitamin E (primarily α-tocopherol) is the most important lipid-soluble, chain-breaking antioxidant in the body. Its key function is: <br><b>• Membrane Protection:</b> It is located within cell membranes, where it directly neutralizes free radicals, thereby protecting the polyunsaturated fatty acids in the membrane from oxidative damage (lipid peroxidation). This maintains the structural integrity and function of all cells, but is particularly critical for: <br>  - <b>Immune Cells:</b> Neutrophils and macrophages produce a burst of free radicals to kill ingested bacteria. Vitamin E protects these immune cells from self-inflicted oxidative damage, preserving their function. <br>  - <b>Muscle Cells:</b> Protects muscle tissue from oxidative damage during exercise and metabolic stress.' },
                 { title: 'Suggested Dietary Intake (NZ Context)', content: 'Basal requirements are <b>500 IU/day for lactating cows</b> and <b>1,000 IU/day for dry cows</b>. However, for enhanced immunity, strategic supplementation of <b>2,000 IU/day during the final 2-3 weeks of gestation</b> is an evidence-based strategy to reduce metabolic diseases.' },
                 { title: 'Deficiency', content: 'Can cause white muscle disease (nutritional muscular dystrophy), especially if Selenium is also low. Suboptimal levels compromise immune function during the high-stress transition period.' }
             ]
